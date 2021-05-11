@@ -30,3 +30,34 @@ class Solution {
         
     }
 }
+/*TC=>O(n/2)
+SC=>O(1)*/
+
+/*
+Floyd's Cycle Detection Algorithm known as Floyd's Tortoise and Hare Algorithm
+Slow pointer=>tortoise
+Fast Pointer=>hare*/
+
+class Solution {
+    public ListNode middleNode(ListNode head) {
+        if(head==null)
+        {
+            return null;
+        }
+        ListNode slow=head;
+        ListNode fast=head;
+        while(fast!=null&&fast.next!=null)
+        {
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        
+        return slow;
+    }
+}
+
+
+
+
+
+
