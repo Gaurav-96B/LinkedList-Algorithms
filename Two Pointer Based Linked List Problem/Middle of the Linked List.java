@@ -1,5 +1,5 @@
 /*TC=>O(n)+O(n/2)
-SC=>O(1)
+SC=>O(1)*/
 
 class Solution {
     public ListNode middleNode(ListNode head) {
