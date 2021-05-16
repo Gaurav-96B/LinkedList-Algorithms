@@ -3,36 +3,30 @@ SC=>O(1)*/
 
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-        
-        ListNode node = head;
-        ListNode result = null;
-        ListNode resultHead = null;
-        
-        while(node != null) 
+        if(head==null||head.next==null)
         {
-        int count = 1;
-        while(node.next != null && node.val == node.next.val) 
-        {
-            count ++;
-            node = node.next;
+            return head;
         }
-            
-            if(count == 1) 
+        ListNode dummy=new ListNode(0);
+        dummy.next=head;
+        ListNode prev=dummy;
+        while(head!=null)
+        {
+            if(head.next!=null&&head.val==head.next.val)
             {
-                if(result == null) 
+                while(head.next!=null && head.val==head.next.val)
                 {
-                    result = new ListNode(node.val);
-                    resultHead = result;
+                    head=head.next;
                 }
-                else 
-                {
-                    result.next = new ListNode(node.val);
-                    result = result.next;
-                }
+                prev.next=head.next;
             }
-            node = node.next;
+            else
+            {
+                prev=prev.next;
+            }
+            head=head.next;
         }
-        return resultHead;   
+        return dummy.next;
     }
 }
 
