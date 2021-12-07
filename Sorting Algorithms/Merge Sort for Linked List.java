@@ -1,3 +1,5 @@
+TC-O(nLogn)
+SC-O(n)
 class LinkedList
 {
     static Node mergeSort(Node head)
