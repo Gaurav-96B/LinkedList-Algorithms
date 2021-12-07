@@ -19,12 +19,13 @@ class Solution {
                     head=head.next;
                 }
                 prev.next=head.next;
+                head=head.next;
             }
             else
             {
                 prev=prev.next;
+                head=head.next;
             }
-            head=head.next;
         }
         return dummy.next;
     }
