@@ -20,6 +20,7 @@ public class Solution {
 
 /* TC=>O(N)
 SC=>O(1)*/
+Algorithms: Floyd’s Cycle-Finding Algorithm 
 public class Solution {
     public boolean hasCycle(ListNode head) {
         if(head==null||head.next==null)
