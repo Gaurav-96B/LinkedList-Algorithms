@@ -1,5 +1,5 @@
- public static boolean detectLoop(Node head){
-        if(head==null&&head.next==null)
+public static boolean detectLoop(Node head){
+        if(head==null||head.next==null)
         {
             return false;
         }
